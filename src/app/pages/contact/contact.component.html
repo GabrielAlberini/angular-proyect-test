@@ -1,0 +1,17 @@
+<h1>Contacto</h1>
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <label for="name">Nombre:</label>
+  <input id="name" formControlName="name">
+  <!-- @if(contactForm.get('name')?.touched && contactForm.get('name')?.invalid) {
+  @if (contactForm.get('name')?.hasError('required')) {
+  <small>El nombre es obligatorio.</small>
+  }
+  } -->
+  <label for="email">Email:</label>
+  <input id="email" formControlName="email" type="email">
+
+  <label for="message">Mensaje:</label>
+  <textarea id="message" formControlName="message"></textarea>
+
+  <button type="submit" [disabled]="contactForm.invalid">Enviar</button>
+</form>

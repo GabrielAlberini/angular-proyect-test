@@ -1,0 +1,11 @@
+<h1>Personajes de Rick and Morty</h1>
+<div class="characters">
+  @for(character of characters; track character.id) {
+  <div class="character">
+    <h3>{{ character.name }}</h3>
+    <p>Status: {{ character.status }}</p>
+    <p>Especie: {{ character.species }}</p>
+    <img [src]="character.image" alt="{{ character.name }}">
+  </div>
+  }
+</div>
